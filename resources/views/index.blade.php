@@ -6,23 +6,31 @@
 -->
 <html>
 	<head>
-		<title>Twenty by HTML5 UP</title>
+		<title>Lemberg City</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<!--[if lte IE 8]>
-        <script src="../../assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="{{ url('../assets/css/main.css') }}" />
+		<script src="../assets/js/ie/html5shiv.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" href="/resources/assets/css/main.css" />
+
 		<!--[if lte IE 8]>
-        <link rel="stylesheet" href="{{ url('../assets/css/ie8.css') }}"/><![endif]-->
+		<link rel="stylesheet" href="/resources/assets/css/ie8.css" />
+		<![endif]-->
+
 		<!--[if lte IE 9]>
-        <link rel="stylesheet" href="{{ url('../assets/css/ie9.css') }}"/><![endif]-->
+		<link rel="stylesheet" href="/resources/assets/css/ie9.css" />
+		<![endif]-->
 	</head>
+
 	<body class="index">
 		<div id="page-wrapper">
 
 			<!-- Header -->
 				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
+					<h1 id="logo"><a href="index.html">INDEX <span>by HTML5 UP</span></a></h1>
 					<nav id="nav">
 						<ul>
 							<li class="current"><a href="index.html">Welcome</a></li>
@@ -176,7 +184,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../../images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="../images/pic01.jpg" alt="" /></a>
 										<header>
 											<h3>A Really Fast Train</h3>
 										</header>
@@ -187,7 +195,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../../images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="../images/pic02.jpg" alt="" /></a>
 										<header>
 											<h3>An Airport Terminal</h3>
 										</header>
@@ -200,7 +208,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../../images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="../images/pic03.jpg" alt="" /></a>
 										<header>
 											<h3>Hyperspace Travel</h3>
 										</header>
@@ -211,7 +219,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../../images/pic04.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="../images/pic04.jpg" alt="" /></a>
 										<header>
 											<h3>And Another Train</h3>
 										</header>
@@ -267,15 +275,16 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.dropotron.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollgress.min.js"></script>
-			<script src="../../assets/js/skel.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.dropotron.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.scrollgress.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
 			<!--[if lte IE 8]>
-        <script src="../../assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="../../assets/js/main.js"></script>
+			<script src="../assets/js/ie/respond.min.js"></script>
+			<![endif]-->
+			<script src="../assets/js/main.js"></script>
 
 	</body>
 </html>
