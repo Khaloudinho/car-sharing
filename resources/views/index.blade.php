@@ -33,7 +33,7 @@
 					<h1 id="logo"><a href="index.html">INDEX <span>by HTML5 UP</span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="{{ url('/home') }}">Welcome</a></li>
 							<li class="submenu">
 								<a href="#">Layouts</a>
 								<ul>
