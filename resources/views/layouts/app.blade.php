@@ -47,9 +47,8 @@
                     <li><a href="{{ url('/login') }}" class="current">Se connecter</a></li>
                     <li><a href="{{ url('/register') }}" class="button special">Inscription</a></li>
                 @else
-                <!--<li><a href="{{ url('/logout') }}" class="button special">Se déconnecter</a></li>-->
-                    <a href="{{ url('/logout') }}"
-                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Logout </a>
+                    <li><a href="{{ url('/logout') }}" class="current"
+                       onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Se déconnecter </a></li>
 
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                           style="display: none;">{{ csrf_field() }} </form>
