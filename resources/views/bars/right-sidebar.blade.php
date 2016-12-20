@@ -68,7 +68,7 @@
 									<!-- Content -->
 										<div class="content">
 											<section>
-												<a href="#" class="image featured"><img src="../../images/pic03.jpg" alt="" /></a>
+												<a href="#" class="image featured"><img src="../../../public/images/pic03.jpg" alt="" /></a>
 												<header>
 													<h3>Dolore Amet Consequat</h3>
 												</header>
@@ -96,7 +96,7 @@
 											</section>
 
 											<section>
-												<a href="#" class="image featured"><img src="../../images/pic04.jpg" alt="" /></a>
+												<a href="#" class="image featured"><img src="../../../public/images/pic04.jpg" alt="" /></a>
 												<header>
 													<h3>Amet Lorem Tempus</h3>
 												</header>

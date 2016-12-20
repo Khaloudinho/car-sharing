@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nom', 'prenom', 'date-naissance', 'permis', 'no-telephone', 'email', 'password',
     ];
 
     /**
@@ -26,12 +26,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * Get the personne record associated with the user.
-     */
-    public function personne()
-    {
-        return $this->hasOne('App\Personne');
-    }
 }

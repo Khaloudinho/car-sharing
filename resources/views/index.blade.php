@@ -1,85 +1,37 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Lemberg City</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+@extends('layouts.app')
 
-		<!--[if lte IE 8]>
-		<script type="text/javascript" src="{{ asset('/assets/js/ie/html5shiv.js') }}"></script>
-		<![endif]-->
-
-		<link href="{{ url('/assets/css/main.css') }}" rel="stylesheet" type="text/css" />
-
-		<!--[if lte IE 8]>
-		<link href="{{ url('/assets/css/ie8.css') }}" rel="stylesheet" type="text/css" />
-		<![endif]-->
-
-		<!--[if lte IE 9]>
-		<link href="{{ url('/assets/css/ie9.css') }}" rel="stylesheet" type="text/css" />
-		<![endif]-->
-	</head>
+@section('content')
 
 	<body class="index">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">INDEX <span>by HTML5 UP</span></a></h1>
+				<!--<header id="header" class="alt">
+					<h1 id="logo"><span>Site d'auto-partage de la ville : </span>Lemberg City</h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="{{ url('/home') }}">Welcome</a></li>
-							<li class="submenu">
-								<a href="#">Layouts</a>
-								<ul>
-									<li><a href="bars/left-sidebar.blade.php">Left Sidebar</a></li>
-									<li><a href="bars/right-sidebar.blade.php">Right Sidebar</a></li>
-									<li><a href="bars/no-sidebar.blade.php">No Sidebar</a></li>
-									<li><a href="contact.blade.php">Contact</a></li>
-									<li class="submenu">
-										<a href="#">Submenu</a>
-										<ul>
-											<li><a href="#">Dolore Sed</a></li>
-											<li><a href="#">Consequat</a></li>
-											<li><a href="#">Lorem Magna</a></li>
-											<li><a href="#">Sed Magna</a></li>
-											<li><a href="#">Ipsum Nisl</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li><a href="{{ url('/register') }}" class="button special">Sign Up</a></li>
+							<li class="current"><a href="{{ url('/home') }}">Accueil</a></li>
+
+							<li><a href="{{ url('/register') }}" class="button special">Inscription</a></li>
 						</ul>
 					</nav>
-				</header>
+				</header>-->
 
-			<!-- Banner -->
 				<section id="banner">
 
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
 					<div class="inner">
 
 						<header>
-							<h2>TWENTY</h2>
+							<h2>Page d'accueil</h2>
 						</header>
-						<p>This is <strong>Twenty</strong>, a free
-						<br />
-						responsive template
-						<br />
-						by <a href="http://html5up.net">HTML5 UP</a>.</p>
+						<p>Bienvenue sur le site web de <strong>Lemberg City</strong>, ici vous
+                            <br />
+                            pouvez simplement réserver un véhicule pour une durée quelconque.
+                            <br />
+						</p>
 						<footer>
 							<ul class="buttons vertical">
-								<li><a href="#main" class="button fit scrolly">Tell Me More</a></li>
+								<li><a href="#main" class="button fit scrolly">En savoir plus</a></li>
 							</ul>
 						</footer>
 
@@ -87,7 +39,6 @@
 
 				</section>
 
-			<!-- Main -->
 				<article id="main">
 
 					<header class="special container">
@@ -184,7 +135,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../images/pic01.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="/images/pic01.jpg" alt="" /></a>
 										<header>
 											<h3>A Really Fast Train</h3>
 										</header>
@@ -195,7 +146,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../images/pic02.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="/images/pic02.jpg" alt="" /></a>
 										<header>
 											<h3>An Airport Terminal</h3>
 										</header>
@@ -208,7 +159,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../images/pic03.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="/images/pic03.jpg" alt="" /></a>
 										<header>
 											<h3>Hyperspace Travel</h3>
 										</header>
@@ -219,7 +170,7 @@
 								<div class="6u 12u(narrower)">
 
 									<section>
-										<a href="#" class="image featured"><img src="../images/pic04.jpg" alt="" /></a>
+										<a href="#" class="image featured"><img src="/images/pic04.jpg" alt="" /></a>
 										<header>
 											<h3>And Another Train</h3>
 										</header>
@@ -275,16 +226,16 @@
 		</div>
 
 		<!-- Scripts -->
-			<script type="text/javascript" src="{{ asset('/public/assets/js/jquery.min.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/jquery.dropotron.min.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/jquery.scrolly.min.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/jquery.scrollgress.min.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/skel.min.js') }}"></script>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/util.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/jquery.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/jquery.dropotron.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/jquery.scrolly.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/jquery.scrollgress.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/skel.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/util.js') }}"></script>
 			<!--[if lte IE 8]>
-			<script type="text/javascript" src="{{ asset('/public/assets/js/ie/respond.min.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/ie/respond.min.js') }}"></script>
 			<![endif]-->
-			<script type="text/javascript" src="{{ asset('/public/assets/js/main.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('/assets/js/main.js') }}"></script>
 
 	</body>
 </html>

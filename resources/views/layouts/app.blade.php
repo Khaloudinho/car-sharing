@@ -8,75 +8,46 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'car-sharing') }}</title>
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="{{ asset('/assets/js/ie/html5shiv.js') }}"></script>
+    <![endif]-->
+
+    <link href="{{ asset('/assets/css/main.css') }}" rel="stylesheet" type="text/css" />
+
+    <!--[if lte IE 8]>
+    <link href="{{ asset('/assets/css/ie8.css') }}" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+    <link href="{{ asset('/assets/css/ie9.css') }}" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
     <!-- Scripts -->
     <script>
-        window.Laravel = <?php echo json_encode([
+        window.Laravel = <?= json_encode([
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
+        <header id="header" class="alt">
+            <h1 id="logo"><span>Site d'auto-partage de la ville : </span>Lemberg City</h1>
+            <nav id="nav">
+                <ul>
+                    <li class="current"><a href="{{ url('/home') }}">Accueil</a></li>
 
-                    <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                        <span class="sr-only">Toggle Navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
-            </div>
-        </nav>
+                    <li><a href="{{ url('/register') }}" class="button special">Inscription</a></li>
+                </ul>
+            </nav>
+        </header>
 
         @yield('content')
     </div>
