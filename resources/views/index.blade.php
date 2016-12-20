@@ -11,17 +11,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 		<!--[if lte IE 8]>
-		<script type="text/javascript" src="{{ asset('/public/assets/js/ie/html5shiv.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('/assets/js/ie/html5shiv.js') }}"></script>
 		<![endif]-->
 
-		<link href="{{ asset('/public/assets/css/main.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ url('/assets/css/main.css') }}" rel="stylesheet" type="text/css" />
 
 		<!--[if lte IE 8]>
-		<link href="{{ asset('/public/assets/css/ie8.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ url('/assets/css/ie8.css') }}" rel="stylesheet" type="text/css" />
 		<![endif]-->
 
 		<!--[if lte IE 9]>
-		<link href="{{ asset('/public/assets/css/ie9.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ url('/assets/css/ie9.css') }}" rel="stylesheet" type="text/css" />
 		<![endif]-->
 	</head>
 
@@ -53,7 +53,7 @@
 									</li>
 								</ul>
 							</li>
-							<li><a href="#" class="button special">Sign Up</a></li>
+							<li><a href="{{ url('/register') }}" class="button special">Sign Up</a></li>
 						</ul>
 					</nav>
 				</header>
