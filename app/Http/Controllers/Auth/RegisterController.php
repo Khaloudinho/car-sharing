@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Personne;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -63,6 +64,18 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         //dd($data);
+        $personne=new Personne();
+        $personne->prenom=$data['prenom'];
+        $personne->date_naissance=$data['date_naissance'];
+        if($data['permis']=='Yes'){
+            $personne->permis=true;
+        }else{
+            $personne->permis=false;
+        }
+        $personne->tel=$data['tel'];
+        $personne->role=Personne::ROLE_CLIENT;
+        $personne->save();
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
