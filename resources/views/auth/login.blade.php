@@ -47,9 +47,9 @@
                 <div class="form-group">
                     <div class="col-md-6 col-md-offset-4">
                         {!! Form::submit('Je me connecte') !!}
-                        <li class="current"><a class="current" href="{{ url('/password/reset') }}">
+                        <a class="current" href="{{ url('/password/reset') }}">
                             Oubli de mot de passe ?
-                        </a></li>
+                        </a>
                         {!! Form::close() !!}
                     </div>
                 </div>
