@@ -21,12 +21,12 @@
                         @if ($errors->has('nom'))
                             <span class="help-block">
                                         <strong>{{ $errors->first('nom') }}</strong>
-                                    </span>
+                            </span>
                         @endif
                     </div>
                 </div>
-                <br/>
-                <br/>
+                <br />
+                <br />
 
                 <div class="form-group{{ $errors->has('prenom') ? ' has-error' : '' }}">
                     {!! Form::label('label-prenom', 'Prénom', ['class' => 'col-md-4 control-label']) !!}

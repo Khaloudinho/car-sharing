@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'car-sharing') }}</title>
+    <title>Lemberg City</title>
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -36,6 +36,7 @@
         ]); ?>
     </script>
 </head>
+
 <body>
 <div id="app">
     <header id="header" class="alt">
@@ -43,7 +44,8 @@
         <nav id="nav">
             <ul>
                 <li class="current"><a href="{{ url('/home') }}">Accueil</a></li>
-                @if(!Auth::user())
+
+                @if (Auth::guest())
                     <li><a href="{{ url('/login') }}" class="current">Se connecter</a></li>
                     <li><a href="{{ url('/register') }}" class="button special">Inscription</a></li>
                 @else
@@ -52,7 +54,7 @@
 
                     <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                           style="display: none;">{{ csrf_field() }} </form>
-                    <li><a href="" class="current">bonjour, {{Auth::user()->prenom}}</a></li>
+                    <li><a href="" class="current">bonjour, {{ Auth::user()->prenom }}</a></li>
                 @endif
             </ul>
         </nav>

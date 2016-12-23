@@ -21,11 +21,12 @@
                         @if ($errors->has('email'))
                             <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                            </span>
                         @endif
                     </div>
                 </div>
-                <br/>
+                <br />
+                <br />
 
                 <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
                     {!! Form::label('label-password', 'Mot de passe', ['class' => 'col-md-4 control-label']) !!}
@@ -42,22 +43,24 @@
                 </div>
                 <br/>
 
-                <br/>
-
                 <div class="form-group">
                     <div class="col-md-6 col-md-offset-4">
-                        {!! Form::submit('Je me connecte') !!}
+
                         <a class="current" href="{{ url('/password/reset') }}">
                             Oubli de mot de passe ?
                         </a>
+
+                        <br />
+                        <br />
+
+                        {!! Form::submit('Je me connecte') !!}
                         {!! Form::close() !!}
                     </div>
                 </div>
 
-            </div>
-        </section>
-    </div>
-    </div>
+                </div>
+            </section>
+        </div>
     </body>
 
 @endsection
