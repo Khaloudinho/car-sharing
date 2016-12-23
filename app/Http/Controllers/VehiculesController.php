@@ -14,7 +14,8 @@ class VehiculesController extends Controller
      */
     public function index()
     {
-        $vehicules=Vehicule::all();
+        $vehicules=Vehicule::join('type_vehicule','vehicule.id','=','type_vehicule.id')->get();
+        //dd($vehicules);
         return view('vehicules', compact('vehicules'));
     }
 }

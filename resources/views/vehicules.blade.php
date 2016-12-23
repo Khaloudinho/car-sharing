@@ -59,6 +59,15 @@
                                     <h3>{{ $vehicule->modele }}</h3>
                                 </header>
                                 <p>Capacité du réservoir: {{ $vehicule->carburant_max }}</p>
+                                @if ($vehicule->gamme == \App\TypeVehicule::BAS_GAMME)
+                                    <p>Gamme du véhicule: bas de gamme</p>
+                                @elseif ($vehicule->gamme == \App\TypeVehicule::MOYEN_GAMME)
+                                    <p>Gamme du véhicule: moyen gamme</p>
+                                @else
+                                    <p>Gamme du véhicule: haut de gamme</p>
+                                @endif
+
+                                    <p>Base tarifaire: {{ $vehicule->base_tarifaire }} €/jour</p>
                             </section>
 
                         </div>
