@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Reservation;
 use App\Vehicule;
 use Illuminate\Http\Request;
 
@@ -22,8 +23,12 @@ class VehiculesController extends Controller
     public function storeReservation(array $data)
     {
         dd($data);
-        //$vehicules=Vehicule::join('type_vehicule','vehicule.id','=','type_vehicule.id')->get();
-        //dd($vehicules);
+        $reservation=new Reservation();
+        $reservation->date_debut=$data['date_debut'];
+        $reservation->date_retour=$data['date_retour'];
+        $reservation->statut=$data['statut'];
+        $reservation->save();
+        redirect('/vehicules');
         //return view('vehicules', compact('vehicules'));
     }
 

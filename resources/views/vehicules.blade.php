@@ -48,7 +48,6 @@
                 @foreach($vehicules as $vehicule)
                     <div class="row">
                         <div class="4u 12u(narrower)">
-                            {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
                             <section>
                                 <!--j'ai essaye de faire ça cleen mais meme l'id ne prend pas le dessus pour cette raison c'est en dur-->
                                 <img src="{{ asset('/assets/images/imagesVehicules/'.$vehicule->image) }}" alt="{{ $vehicule->modele }}" id="imagecustom" style="max-width: 300px;
@@ -68,6 +67,11 @@
                                     <p>Base tarifaire: {{ $vehicule->base_tarifaire }} €/jour</p>
 
                                 <div class="col-md-6 col-md-offset-0">
+                                    {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
+                                    {!! Form::label('date_debut', 'Date debut de location :') !!}
+                                    {!! Form::date('date_debut') !!}
+                                    {!! Form::label('date_retour', 'Date retour de location :') !!}
+                                    {!! Form::date('date_retour') !!}
                                     {!! Form::hidden('vehiculeSelectionne', $vehicule) !!}
                                     {!! Form::submit('Je réserve') !!}
                                     {!! Form::close() !!}

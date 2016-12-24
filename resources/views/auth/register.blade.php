@@ -6,7 +6,11 @@
 
     <div id="page-wrapper">
 
-        <section id="banner">
+        <section id="banner" style="position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;">
 
             <div class="panel-body">
                 {!! Form::open(['route' => 'register', 'method' => 'post']) !!}

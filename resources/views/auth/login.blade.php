@@ -6,7 +6,11 @@
 
     <div id="page-wrapper">
 
-        <section id="banner">
+        <section id="banner" style="position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;">
 
             <div class="panel-body">
                 {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
@@ -25,8 +29,8 @@
                         @endif
                     </div>
                 </div>
-                <br />
-                <br />
+                <br/>
+                <br/>
 
                 <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
                     {!! Form::label('label-password', 'Mot de passe', ['class' => 'col-md-4 control-label']) !!}
@@ -50,16 +54,16 @@
                             Oubli de mot de passe ?
                         </a>
 
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
                         {!! Form::submit('Je me connecte') !!}
                         {!! Form::close() !!}
                     </div>
                 </div>
 
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
+    </div>
     </body>
 
 @endsection
