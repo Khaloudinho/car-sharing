@@ -19,6 +19,7 @@ class CreateTableReservation extends Migration
             $table->date('date_debut');
             $table->date('date_retour');
             $table->tinyInteger('statut');
+            $table->integer('user_id');
         });
     }
 

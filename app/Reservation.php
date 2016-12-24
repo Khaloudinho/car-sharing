@@ -36,8 +36,8 @@ class Reservation extends Model
     /**
      * Get the typeVehicule record associated with the vehicule.
      */
-    /*public function user()
+    public function user()
     {
-        return $this->hasOne('App\TypeVehicule');
-    }*/
+        return $this->hasOne('App\User');
+    }
 }

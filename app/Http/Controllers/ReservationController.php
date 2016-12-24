@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Reservation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -11,8 +13,9 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(array $data)
     {
-        return view('reservation.reserve');
+        $reservationsuser=Reservation::all()->where('user_id','=', $data->id);
+        return view('', compact('reservationsuser'));
     }
 }
