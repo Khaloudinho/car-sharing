@@ -52,7 +52,6 @@
 
                         <br />
                         <br />
-
                         {!! Form::submit('Je me connecte') !!}
                         {!! Form::close() !!}
                     </div>

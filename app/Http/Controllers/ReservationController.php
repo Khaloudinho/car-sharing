@@ -13,6 +13,6 @@ class ReservationController extends Controller
      */
     public function index()
     {
-        return view('reservation.reservation');
+        return view('reservation.reserve');
     }
 }

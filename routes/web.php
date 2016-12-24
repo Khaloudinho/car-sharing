@@ -17,4 +17,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/vehicules', 'VehiculesController@index');
-Route::get('/reservee', 'ReservationController@index');
+Route::post('/vehicules', 'VehiculesController@storeReservation');
+//Route::post('/reservee', 'ReservationController@index');

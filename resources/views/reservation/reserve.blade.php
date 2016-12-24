@@ -9,7 +9,7 @@
         <section id="banner">
 
             <div class="panel-body">
-                {!! Form::open(['route' => 'reservee', 'method' => 'post']) !!}
+                {!! Form::open(['route' => '/reservee', 'method' => 'post']) !!}
                 {{ csrf_field() }}
 
                 <div class="form-group {{ $errors->has('duree') ? ' has-error' : '' }}">

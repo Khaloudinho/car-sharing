@@ -48,16 +48,15 @@
                 @foreach($vehicules as $vehicule)
                     <div class="row">
                         <div class="4u 12u(narrower)">
-
+                            {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
                             <section>
                                 <!--j'ai essaye de faire ça cleen mais meme l'id ne prend pas le dessus pour cette raison c'est en dur-->
-                                <img src="{{ asset('/assets/images/imagesVehicules/'.$vehicule->image) }}" alt="{{ $vehicule->modele }}" id="imagecustom" style="max-width: 200px;
-                                     max-height: 200px;">
+                                <img src="{{ asset('/assets/images/imagesVehicules/'.$vehicule->image) }}" alt="{{ $vehicule->modele }}" id="imagecustom" style="max-width: 300px;
+                                     max-height: 300px;">
                                 <header>
-                                    <h3>{{ $vehicule->marque }}</h3>
-                                    <h3>{{ $vehicule->modele }}</h3>
+                                    <h3>{{ $vehicule->marque." ".$vehicule->modele }}</h3>
                                 </header>
-                                <p>Capacité du réservoir: {{ $vehicule->carburant_max }}</p>
+                                <p>Capacité du réservoir: {{ $vehicule->carburant_max }} l</p>
                                 @if ($vehicule->gamme == \App\TypeVehicule::BAS_GAMME)
                                     <p>Gamme du véhicule: bas de gamme</p>
                                 @elseif ($vehicule->gamme == \App\TypeVehicule::MOYEN_GAMME)
@@ -67,6 +66,12 @@
                                 @endif
 
                                     <p>Base tarifaire: {{ $vehicule->base_tarifaire }} €/jour</p>
+
+                                <div class="col-md-6 col-md-offset-0">
+                                    {!! Form::hidden('vehiculeSelectionne', $vehicule) !!}
+                                    {!! Form::submit('Je réserve') !!}
+                                    {!! Form::close() !!}
+                                </div>
                             </section>
 
                         </div>

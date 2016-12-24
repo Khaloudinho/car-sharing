@@ -18,4 +18,14 @@ class VehiculesController extends Controller
         //dd($vehicules);
         return view('vehicules', compact('vehicules'));
     }
+
+    public function storeReservation(array $data)
+    {
+        dd($data);
+        //$vehicules=Vehicule::join('type_vehicule','vehicule.id','=','type_vehicule.id')->get();
+        //dd($vehicules);
+        //return view('vehicules', compact('vehicules'));
+    }
+
+
 }
