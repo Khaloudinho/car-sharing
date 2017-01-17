@@ -12,15 +12,15 @@
                 {!! Form::open(['route' => 'login', 'method' => 'post']) !!}
                 {{ csrf_field() }}
 
-                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                    {!! Form::label('label-email', 'Adresse e-mail', ['class' => 'col-md-4 control-label']) !!}
+                <div class="form-group{{ $errors->has('identifiant') ? ' has-error' : '' }}">
+                    {!! Form::label('identifiant', 'Identifiant', ['class' => 'col-md-4 control-label']) !!}
 
                     <div class="col-md-6">
-                        {!! Form::email('email', old('email'), ['class' => 'form-control',  'style' => 'border: 1px solid white']) !!}
+                        {!! Form::email('identifiant', old('identifiant'), ['class' => 'form-control',  'style' => 'border: 1px solid white']) !!}
 
-                        @if ($errors->has('email'))
+                        @if ($errors->has('identifiant'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                <strong>{{ $errors->first('identifiant') }}</strong>
                             </span>
                         @endif
                     </div>
@@ -28,16 +28,16 @@
                 <br />
                 <br />
 
-                <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
+                <div class="form-group {{ $errors->has('mot-de-passe') ? ' has-error' : '' }}">
                     {!! Form::label('label-password', 'Mot de passe', ['class' => 'col-md-4 control-label']) !!}
 
                     <div class="col-md-6">
-                        {!! Form::password('password', ['class' => 'form-control', 'style' => 'border: 1px solid white']) !!}
+                        {!! Form::password('mot-de-passe', ['class' => 'form-control', 'style' => 'border: 1px solid white']) !!}
 
-                        @if ($errors->has('password'))
+                        @if ($errors->has('mot-de-passe'))
                             <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                                <strong>{{ $errors->first('mot-de-passe') }}</strong>
+                            </span>
                         @endif
                     </div>
                 </div>
